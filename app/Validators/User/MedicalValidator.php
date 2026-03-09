@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Validators;
+namespace App\Validators\User;
+
 
 use App\Validators\Validator;
 use Illuminate\Validation\Rule;

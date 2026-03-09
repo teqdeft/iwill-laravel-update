@@ -1,6 +1,7 @@
 <?php
 
-namespace Modules\SharePerference\Validators;
+namespace Modules\SharingPreference\Validators;
+
 
 use App\Validators\Validator;
 use Illuminate\Validation\Rule;

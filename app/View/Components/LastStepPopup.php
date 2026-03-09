@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class lastStepPopup extends Component
+class LastStepPopup extends Component
 {
     /**
      * Create a new component instance.

@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Models\Promocode;

@@ -1040,13 +1040,12 @@ if( !function_exists('selectedOption') ){
 
 
 if( !function_exists('checkedIcon') ){
-    function checkedIcon($checkVar = "",$equalTwo){
+    function checkedIcon($equalTwo, $checkVar = ""){
         if( !empty($checkVar) && $checkVar == $equalTwo ){
             return 'checked';
         }
         return "";
     }
-
 }
 
 if( !function_exists('menu_access') ){
