@@ -1,0 +1,47 @@
+[04-Nov-2025 04:15:01 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:01 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/d5134/dev.iwilltilimwell.com/public/index.php:34
+Stack trace:
+#0 /home/d5134/dev.iwilltilimwell.com/server.php(21): require_once()
+#1 {main}
+  thrown in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:02 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:02 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/d5134/dev.iwilltilimwell.com/public/index.php:34
+Stack trace:
+#0 /home/d5134/dev.iwilltilimwell.com/server.php(21): require_once()
+#1 {main}
+  thrown in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:03 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:03 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/d5134/dev.iwilltilimwell.com/public/index.php:34
+Stack trace:
+#0 /home/d5134/dev.iwilltilimwell.com/server.php(21): require_once()
+#1 {main}
+  thrown in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:04 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:04 UTC] PHP Warning:  require(/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/d5134/dev.iwilltilimwell.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/d5134/dev.iwilltilimwell.com/public/index.php:34
+Stack trace:
+#0 /home/d5134/dev.iwilltilimwell.com/server.php(21): require_once()
+#1 {main}
+  thrown in /home/d5134/dev.iwilltilimwell.com/public/index.php on line 34
+[04-Nov-2025 04:15:05 UTC] PHP Warning:  require_once(/home/d5134/dev.iwilltilimwell.com/vendor/composer/autoload_real.php): Failed to open stream: No such file or directory in /home/d5134/dev.iwilltilimwell.com/vendor/autoload.php on line 23
+[04-Nov-2025 04:15:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/d5134/dev.iwilltilimwell.com/vendor/composer/autoload_real.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/d5134/dev.iwilltilimwell.com/vendor/autoload.php:23
+Stack trace:
+#0 /home/d5134/dev.iwilltilimwell.com/public/index.php(34): require()
+#1 /home/d5134/dev.iwilltilimwell.com/server.php(21): require_once('/home/d5134/dev...')
+#2 {main}
+  thrown in /home/d5134/dev.iwilltilimwell.com/vendor/autoload.php on line 23
+[04-Nov-2025 07:03:51 UTC] PHP Fatal error:  Allowed memory size of 8589934592 bytes exhausted (tried to allocate 6440357888 bytes) in /home/d5134/dev.iwilltilimwell.com/app/helpers.php on line 1860
+[04-Nov-2025 07:04:26 UTC] PHP Fatal error:  Allowed memory size of 8589934592 bytes exhausted (tried to allocate 6440357888 bytes) in /home/d5134/dev.iwilltilimwell.com/app/helpers.php on line 1860
+[26-Nov-2025 04:32:19 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "13_14", expecting "]" in /home/d5134/dev.iwilltilimwell.com/app/helpers.php on line 1647
+[26-Nov-2025 04:32:21 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "13_14", expecting "]" in /home/d5134/dev.iwilltilimwell.com/app/helpers.php on line 1647
+[26-Nov-2025 04:32:24 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "13_14", expecting "]" in /home/d5134/dev.iwilltilimwell.com/app/helpers.php on line 1647
+[22-Dec-2025 09:04:47 UTC] PHP Parse error:  Unclosed '[' on line 1692 in /home/d5134/dev.iwilltilimwell.com/app/helpers.php on line 1700
+[04-Feb-2026 12:07:52 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Mail as Mail because the name is already in use in /home/d5134/dev.iwilltilimwell.com/app/Http/Controllers/SubscriptionController.php on line 30
+[20-Feb-2026 05:49:55 UTC] PHP Fatal error:  Cannot declare class AddFreeTrialToBraintreeSubscriptionTable, because the name is already in use in /home/d5134/dev.iwilltilimwell.com/database/migrations/2026_02_20_050123_add_free_trial_to_braintree_subscription_table.php on line 7
+[20-Feb-2026 05:50:57 UTC] PHP Fatal error:  Cannot declare class AddFreeTrialToBraintreeSubscriptionTable, because the name is already in use in /home/d5134/dev.iwilltilimwell.com/database/migrations/2026_02_20_050123_add_free_trial_to_braintree_subscription_table.php on line 7
+[20-Feb-2026 05:51:44 UTC] PHP Fatal error:  Cannot declare class AddFreeTrialToBraintreeSubscriptionTable, because the name is already in use in /home/d5134/dev.iwilltilimwell.com/database/migrations/2026_02_20_050123_add_free_trial_to_braintree_subscription_table.php on line 7
+[20-Feb-2026 05:51:47 UTC] PHP Fatal error:  Cannot declare class AddFreeTrialToBraintreeSubscriptionTable, because the name is already in use in /home/d5134/dev.iwilltilimwell.com/database/migrations/2026_02_20_050123_add_free_trial_to_braintree_subscription_table.php on line 7
+[20-Feb-2026 05:54:10 UTC] PHP Fatal error:  Cannot declare class AddFreeTrialToBraintreeSubscriptionTable2, because the name is already in use in /home/d5134/dev.iwilltilimwell.com/database/migrations/2026_02_20_050123_add_free_trial_to_braintree_subscription_table.php on line 7
