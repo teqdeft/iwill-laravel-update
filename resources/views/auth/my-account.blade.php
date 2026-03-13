@@ -247,8 +247,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function addNewDependent() {
-	$(".add-new-dependent-content").addClass("active show");
+function addNewDependent() { 
+	$(".add-new-dependent-tab").addClass("active").removeClass("d-none");
+	$(".add-new-dependent-content").addClass("active show").removeClass("d-none");
 }
 function changeEmailDependent(){
 	$(".email-section").toggle();

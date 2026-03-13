@@ -1096,35 +1096,47 @@ class ConsultationController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function createConsultation(Request $request)
-    {
-		
-		$userId = Auth::user()->userid;
-		$action = $request->action;
-		$tele_data = [];
-		$post_url=Config::get('constants.tel_api_url')."v2/consultation/$action?user_id=$userId&modality=phone";
-        $eligible_members = $this->postToteleMedicine($tele_data, $post_url, false, false);
-		/* echo "<pre>";;
-		print_r($eligible_members);
-		echo "</pre>"; */
-        if(isset($eligible_members) && $eligible_members['success']==1) {
-	
-			$input = $request->all();
-			$model = new Consultations;
-			$model->userId = $input['userid'];
-			$model->modalities = $input['modality'];
-			$model->eligible_members = json_encode($eligible_members);
-			$consultation = $model->save();
-			if ($consultation) {
-				echo json_encode(['original' => ['status' => true, 'consultation_id' => $model->id]]);
-				die;
-			} else {
-				echo json_encode(['original' => ['status' => false]]);
-				die;
-			}	
-			
-		}
-		echo json_encode(['original' => ['status' => false,'message'=>$eligible_members['message']]]);
-    }
+            {
+                try {
+                    $userId = Auth::user()->userid;
+                    $action = $request->action;
+                    $tele_data = [];
+                    $post_url = Config::get('constants.tel_api_url')."v2/consultation/$action?user_id=$userId&modality=phone";
+                    
+                    $eligible_members = $this->postToteleMedicine($tele_data, $post_url, false, false);
+
+                    if (isset($eligible_members) && $eligible_members['success'] == 1) {
+
+                        $input = $request->all();
+                        $model = new Consultations;
+                        $model->userId = $input['userid'];
+                        $model->modalities = $input['modality'];
+                        $model->eligible_members = json_encode($eligible_members);
+                        $consultation = $model->save();
+
+                        if ($consultation) {
+                            echo json_encode(['original' => ['status' => true, 'consultation_id' => $model->id]]);
+                            die;
+                        } else {
+                            echo json_encode(['original' => ['status' => false, 'message' => 'Failed to save consultation']]);
+                            die;
+                        }
+                    }
+
+                    
+                    $message = $eligible_members['message'] ?? 'No response from telemedicine service';
+                    echo json_encode(['original' => ['status' => false, 'message' => $message]]);
+
+                } catch (\Exception $e) {
+                    
+                    echo json_encode([
+                        'original' => [
+                            'status'  => false,
+                            'message' => 'An error occurred: ' . $e->getMessage()
+                        ]
+                    ]);
+                }
+            }
 
     public function updateConsultation(Request $request, $consultation_id)
     {

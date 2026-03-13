@@ -24,7 +24,8 @@
                <div class="card">
 					@include('HealthRecord::medications-card-header',['slug'=>'medication-allergies'])
                   <div class="card-body personal-info-card-box">
-
+					
+					
                     <div class="row">
                         <div class="col">
                             <form class="forms-sample clickOffSubmitBtn" method="post" action="{{ route('store.NottakeMedication', $user->id) }}">
@@ -52,7 +53,11 @@
                             </form>
                         </div>
                     </div>
-                    <div class="medication-rec-cont mt-4"  @if ( empty($inComplete) ) style="display:none;" @endif id="medical_show-check">
+					
+                    <div class="medication-rec-cont mt-4" 
+						 style="{{ $allergies->isEmpty() ? 'display:none;' : '' }}" 
+						 id="medical_show-check">
+					
                      <h4 class="card-title">Add Medication Allergy</h4>
                      <form class="forms-sample medication-allergies clickOnSubmitBtn" method="post" action="{{ route('store.medication.allergy', $user->id) }}" id="medication-allergy-form">
                         {{ csrf_field() }}
@@ -172,6 +177,8 @@
 									@endif
                                  </div>
                               </div>
+							  
+									
                               @if ($dependents) 
                               @foreach ($dependents as $dependent)
                               <div class="tab-pane {{ request()->get('user_id')==$dependent->id ? 'active' : '' }}" id="user{{ $dependent->id }}" role="tabpanel">
@@ -198,10 +205,12 @@
                                                          <td>{{ @$allergy->name }}</td>
                                                          <td>
                                                             @if (@$allergy->deleted_at == '')
-                                                            <a href="javascript:void(0)"> <label class="badge badge-danger-cus"><i class="fas fa-ban mr-1" ></i>  This medication allergy is not valid for me.</label></a>
+                                                            
+														<a href="javascript:void(0)"> <label class="badge badge-danger-cus"><i class="fas fa-ban mr-1" ></i>  This medication allergy is not valid for me.</label></a>
                                                             @else
                                                             {{ 'Inactive - no actions allowed' }}
                                                             @endif
+															
 															
 															<a class="deleteByAjax" href="javascript:;" number="{{ $allergy->id }}" data-url="{{ url('medication-allergies/delete') }}"  data-toggle="tooltip" title="Delete"><label class="badge badge-danger-cus"><i class="fas fa-trash"></i></label></a>
 															
@@ -220,6 +229,7 @@
                               </div>
                               @endforeach
                               @endif
+							 
                            </div>
     
 	<div class="col-md-12 grid-margin">
